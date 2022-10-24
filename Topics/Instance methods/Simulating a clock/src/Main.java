@@ -1,34 +1,26 @@
-public class Main {
-    public static void main(String[] args) {
-        Clock clock = new Clock();
-        clock.hours = 12;
-        clock.minutes = 58;
-
-        int runs = 0;
-        while (runs <= 5) {
-            clock.next();
-            System.out.printf("Hours: %d Minutes: %d%n", clock.hours, clock.minutes);
-            runs++;
-        }
-    }
-}
-
 
 class Clock {
+    private static final int MAX_HOURS = 12;
+    private static final int MAX_MINUTES = 59;
+    private static final int MIN_MINUTES = 0;
+    private static final int MIN_HOURS = 1;
 
-    int hours = 12;
-    int minutes = 0;
+    int hours = MAX_HOURS;
+    int minutes = MIN_MINUTES;
 
     void next() {
-        // implement me
-        if (this.hours == 12 && this.minutes == 59) {
-            this.hours = 1;
-            this.minutes = 0;
-        } else if (this.minutes != 60) {
-            this.minutes++;
-        } else if (this.hours != 12 && this.minutes != 60) {
+
+        if (this.hours == MAX_HOURS && this.minutes == MAX_MINUTES) {
+            this.hours = MIN_HOURS;
+            this.minutes = MIN_MINUTES;
+        } else if (this.minutes == MAX_MINUTES) {
+            this.minutes = MIN_MINUTES;
             this.hours++;
-            this.minutes = 0;
+        } else if (this.minutes < MAX_MINUTES) {
+            this.minutes++;
+        } else {
+            System.out.println("Error");
         }
     }
 }
+
