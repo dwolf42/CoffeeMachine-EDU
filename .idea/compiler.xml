@@ -148,9 +148,15 @@
       <module name="CoffeeMachine-EDU.Topics-Iterating_over_arrays-The_sum_of_array_elements.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Iterating_over_arrays-Theory.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Iterating_over_arrays-Two_numbers_never_occur_next_to_each_other.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Overloading-A_pair_of_overloaded_methods.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Overloading-Conditionals_for_overloading.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Overloading-Determine_the_output.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Overloading-Overloading_methods.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Overloading-Print.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Overloading-Successful_overloading.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Overloading-Theory.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Overloading-What_can_two_methods_have.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Overloading-When_overloading_happens.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-Collatz_conjecture.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-Determine_the_result.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-Determine_the_result__1_.main" target="11" />
