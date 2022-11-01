@@ -117,6 +117,7 @@
       <module name="CoffeeMachine-EDU.Topics-Defining_classes-Theory.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Functional_decomposition-Calculator_with_four_methods.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Functional_decomposition-Theory.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Instance_methods-Car.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Instance_methods-Circle.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Instance_methods-Complex_numbers.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Instance_methods-Counter.main" target="11" />
