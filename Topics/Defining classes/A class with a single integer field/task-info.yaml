@@ -1,11 +1,7 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: a
-- text: b
-- text: c
-- text: d
-- text: e
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true
@@ -21,4 +17,3 @@ files:
 feedback_link: https://hyperskill.org/learn/step/2948#comment
 status: Solved
 record: -1
-local_check: false

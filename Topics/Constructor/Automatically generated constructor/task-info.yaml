@@ -1,12 +1,7 @@
 type: choice
 is_multiple_choice: false
-options:
-- text: there is no automatically generated constructor
-- text: a constructor taking <b>header</b> as the parameter
-- text: a constructor taking two parameters (<b>header</b> and <b>body</b>)
-- text: 'two constructors: the first one takes <b>header</b>, the second one takes
-    <b>body</b>'
-- text: a no-argument constructor
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true
@@ -22,4 +17,3 @@ files:
 feedback_link: https://hyperskill.org/learn/step/3458#comment
 status: Solved
 record: -1
-local_check: false
