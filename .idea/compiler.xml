@@ -167,6 +167,8 @@
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-The_smallest_value.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-The_sum_of_elements.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-Theory.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-What_is_an_exception-Avoid_division_by_zero.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-What_is_an_exception-Theory.main" target="11" />
       <module name="CoffeeMachine-EDU.util.main" target="11" />
     </bytecodeTargetLevel>
   </component>

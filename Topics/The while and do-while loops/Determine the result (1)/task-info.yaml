@@ -1,5 +1,10 @@
 type: choice
 is_multiple_choice: false
+options:
+- text: 5 4 3 2 1
+- text: 5 4 3 2
+- text: 6 5 4 3 2
+- text: '6 5 4 3 '
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:

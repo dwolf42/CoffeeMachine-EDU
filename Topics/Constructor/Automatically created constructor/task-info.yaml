@@ -1,5 +1,11 @@
 type: choice
 is_multiple_choice: false
+options:
+- text: copy constructor
+- text: private constructor
+- text: generic constructor
+- text: parameterized constructor
+- text: default no-arg constructor
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:
