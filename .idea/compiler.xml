@@ -158,6 +158,7 @@
       <module name="CoffeeMachine-EDU.Topics-Overloading-What_can_two_methods_have.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Overloading-When_overloading_happens.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Package-Accessible_packages.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Binary_search.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Package-Class_hierarchy.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Package-Correct_packages.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Package-Creating_instances.main" target="11" />
