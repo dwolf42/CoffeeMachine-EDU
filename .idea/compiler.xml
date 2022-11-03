@@ -157,9 +157,17 @@
       <module name="CoffeeMachine-EDU.Topics-Overloading-Theory.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Overloading-What_can_two_methods_have.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Overloading-When_overloading_happens.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Accessible_packages.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Class_hierarchy.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Correct_packages.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Package-Creating_instances.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Getting_input.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Package_features.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Package-Purpose.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Short_names.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Sorting_arrays.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Package-Theory.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Which_classes_are_accessible.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-Collatz_conjecture.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-Determine_the_result.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-Determine_the_result__1_.main" target="11" />
