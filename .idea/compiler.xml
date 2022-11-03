@@ -157,6 +157,9 @@
       <module name="CoffeeMachine-EDU.Topics-Overloading-Theory.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Overloading-What_can_two_methods_have.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-Overloading-When_overloading_happens.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Creating_instances.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Purpose.main" target="11" />
+      <module name="CoffeeMachine-EDU.Topics-Package-Theory.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-Collatz_conjecture.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-Determine_the_result.main" target="11" />
       <module name="CoffeeMachine-EDU.Topics-The_while_and_do-while_loops-Determine_the_result__1_.main" target="11" />
