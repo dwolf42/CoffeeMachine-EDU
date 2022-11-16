@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/204875/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Thu, 01 Sep 2022 20:29:39 UTC"
+update_date: Thu, 03 Nov 2022 18:42:20 UTC
 stages:
 - id: 175
   step: 5329
@@ -38,9 +38,9 @@ topics:
   - title: Printing data
     theory_id: 3749
   1:
-  - title: "Write, compile, and run"
+  - title: Write, compile, and run
     theory_id: 3739
-  - title: "JVM, JRE, and JDK"
+  - title: JVM, JRE, and JDK
     theory_id: 3499
   - title: Introduction to Operating systems
     theory_id: 9704

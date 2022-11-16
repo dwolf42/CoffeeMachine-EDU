@@ -6,6 +6,8 @@ options:
 - text: "If the programmer does not provide a constructor for a class, the code cannot\
     \ compile."
 - text: A constructor cannot contain a body.
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true
@@ -21,4 +23,3 @@ files:
 feedback_link: https://hyperskill.org/learn/step/3401#comment
 status: Solved
 record: -1
-local_check: false

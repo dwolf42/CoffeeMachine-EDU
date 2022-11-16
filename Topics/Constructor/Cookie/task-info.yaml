@@ -8,6 +8,8 @@ options:
     type <b>String</b>. '
 - text: The  class <b>Cookie</b> has a constructor without parameters.
 - text: The class <b>Cookie</b> has the default constructor.
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true
@@ -23,4 +25,3 @@ files:
 feedback_link: https://hyperskill.org/learn/step/1984#comment
 status: Solved
 record: -1
-local_check: false

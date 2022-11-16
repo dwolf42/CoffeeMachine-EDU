@@ -5,6 +5,8 @@ options:
 - text: Instance methods cannot take any parameters.
 - text: Instance methods have the keyword <b>instance</b> in their declaration.
 - text: Instance methods don't have the keyword <b>static</b> in their declaration.
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true
@@ -21,4 +23,3 @@ feedback_link: https://hyperskill.org/learn/step/3778#comment
 status: Solved
 record: -1
 custom_name: What is it?
-local_check: false

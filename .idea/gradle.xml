@@ -12,12 +12,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Coffee Machine/task" />
-            <option value="$PROJECT_DIR$/Coffee Machine/task/build/classes/java" />
-            <option value="$PROJECT_DIR$/Coffee Machine/task/build/generated/sources/annotationProcessor/java" />
-            <option value="$PROJECT_DIR$/Coffee Machine/task/build/generated/sources/headers/java" />
-            <option value="$PROJECT_DIR$/Coffee Machine/task/build/reports/tests" />
-            <option value="$PROJECT_DIR$/Coffee Machine/task/build/test-results" />
-            <option value="$PROJECT_DIR$/Coffee Machine/task/build/tmp" />
             <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Application as a class" />
             <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Theory" />
             <option value="$PROJECT_DIR$/Topics/Constructor/A required part of a class" />
@@ -53,18 +47,17 @@
             <option value="$PROJECT_DIR$/Topics/Defining classes/Theory" />
             <option value="$PROJECT_DIR$/Topics/Functional decomposition/Calculator with four methods" />
             <option value="$PROJECT_DIR$/Topics/Functional decomposition/Theory" />
-            <option value="$PROJECT_DIR$/Topics/Getters and setters/Account" />
-            <option value="$PROJECT_DIR$/Topics/Getters and setters/Book" />
-            <option value="$PROJECT_DIR$/Topics/Getters and setters/Choose a pair of getter and setter" />
-            <option value="$PROJECT_DIR$/Topics/Getters and setters/Getting the fullname" />
-            <option value="$PROJECT_DIR$/Topics/Getters and setters/The name of setter" />
-            <option value="$PROJECT_DIR$/Topics/Getters and setters/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Instance methods/Car" />
             <option value="$PROJECT_DIR$/Topics/Instance methods/Circle" />
             <option value="$PROJECT_DIR$/Topics/Instance methods/Complex numbers" />
             <option value="$PROJECT_DIR$/Topics/Instance methods/Counter" />
+            <option value="$PROJECT_DIR$/Topics/Instance methods/Declare me" />
             <option value="$PROJECT_DIR$/Topics/Instance methods/In a box" />
+            <option value="$PROJECT_DIR$/Topics/Instance methods/Instance method and its class" />
             <option value="$PROJECT_DIR$/Topics/Instance methods/Invoke instance method" />
+            <option value="$PROJECT_DIR$/Topics/Instance methods/Patient needs a doctor" />
             <option value="$PROJECT_DIR$/Topics/Instance methods/Simulating a clock" />
+            <option value="$PROJECT_DIR$/Topics/Instance methods/The Robot class" />
             <option value="$PROJECT_DIR$/Topics/Instance methods/Theory" />
             <option value="$PROJECT_DIR$/Topics/Instance methods/What is it" />
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Boxes" />
@@ -85,6 +78,27 @@
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/The sum of array elements" />
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Theory" />
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Two numbers never occur next to each other" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/A pair of overloaded methods" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/Conditionals for overloading" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/Determine the output" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/Overloading methods" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/Print" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/Successful overloading" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/What can two methods have" />
+            <option value="$PROJECT_DIR$/Topics/Overloading/When overloading happens" />
+            <option value="$PROJECT_DIR$/Topics/Package/Accessible packages" />
+            <option value="$PROJECT_DIR$/Topics/Package/Binary search" />
+            <option value="$PROJECT_DIR$/Topics/Package/Class hierarchy" />
+            <option value="$PROJECT_DIR$/Topics/Package/Correct packages" />
+            <option value="$PROJECT_DIR$/Topics/Package/Creating instances" />
+            <option value="$PROJECT_DIR$/Topics/Package/Getting input" />
+            <option value="$PROJECT_DIR$/Topics/Package/Package features" />
+            <option value="$PROJECT_DIR$/Topics/Package/Purpose" />
+            <option value="$PROJECT_DIR$/Topics/Package/Short names" />
+            <option value="$PROJECT_DIR$/Topics/Package/Sorting arrays" />
+            <option value="$PROJECT_DIR$/Topics/Package/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Package/Which classes are accessible" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Collatz conjecture" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Determine the result" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Determine the result (1)" />
@@ -95,6 +109,8 @@
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The smallest value" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The sum of elements" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Theory" />
+            <option value="$PROJECT_DIR$/Topics/What is an exception/Avoid division by zero" />
+            <option value="$PROJECT_DIR$/Topics/What is an exception/Theory" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>
