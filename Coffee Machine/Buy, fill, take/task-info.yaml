@@ -1,5 +1,5 @@
 type: edu
-custom_name: Buy, fill, take!
+custom_name: "Buy, fill, take!"
 files:
 - name: src/machine/CoffeeMachine.java
   visible: true
