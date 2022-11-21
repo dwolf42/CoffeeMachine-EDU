@@ -7,8 +7,6 @@ options:
 - text: "two constructors: the first one takes <b>header</b>, the second one takes\
     \ <b>body</b>"
 - text: a no-argument constructor
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true
@@ -24,3 +22,4 @@ files:
 feedback_link: https://hyperskill.org/learn/step/3458#comment
 status: Solved
 record: -1
+local_check: true

@@ -7,8 +7,6 @@ options:
 - text: several methods have the same name and parameters but different return types
 - text: several methods have the same return types
 - text: several methods have the same name but different number or type of parameters
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true
@@ -24,3 +22,4 @@ files:
 feedback_link: https://hyperskill.org/learn/step/3449#comment
 status: Solved
 record: -1
+local_check: true

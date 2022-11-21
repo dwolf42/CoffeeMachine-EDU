@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: public void method() { }
-- text: public instance void method() { }
-- text: public static void method() { }
-- text: public instance method() { }
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: "public void method() { }"
+- text: "public instance void method() { }"
+- text: "public static void method() { }"
+- text: "public instance method() { }"
 files:
 - name: src/Task.java
   visible: true
@@ -22,3 +20,4 @@ files:
 feedback_link: https://hyperskill.org/learn/step/2957#comment
 status: Solved
 record: -1
+local_check: true

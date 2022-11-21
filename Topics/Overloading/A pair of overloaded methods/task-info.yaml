@@ -1,14 +1,13 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: public static void method2() { /* do something */ }
-- text: public static int method2() { /* do something */ }
-- text: public static void method1(int a, double b) { /* do something */ }
-- text: public static void method1() { /* do something */ }
-- text: public static void method3(int a, double b, long c) { /* do something */ }
-- text: public static void method333() { /* do something */ }
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: "public static void method2() { /* do something */ }"
+- text: "public static int method2() { /* do something */ }"
+- text: "public static void method1(int a, double b) { /* do something */ }"
+- text: "public static void method1() { /* do something */ }"
+- text: "public static void method3(int a, double b, long c) { /* do something */\
+    \ }"
+- text: "public static void method333() { /* do something */ }"
 files:
 - name: src/Task.java
   visible: true
@@ -24,3 +23,4 @@ files:
 feedback_link: https://hyperskill.org/learn/step/2749#comment
 status: Solved
 record: -1
+local_check: true
