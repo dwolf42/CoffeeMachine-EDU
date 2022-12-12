@@ -1,25 +1,35 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
-class Main {
-    // implement me
-    private static void rotate(int[] arr, int steps) {
-
-    }
-
-    // do not change code below
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[] arr = Arrays.stream(scanner.nextLine().split(" "))
-                .mapToInt(Integer::parseInt)
-                .toArray();
 
-        int steps = Integer.parseInt(scanner.nextLine());
+        String[] stringInputToArray = scanner.nextLine().split(" ");
+        int times = scanner.nextInt() % stringInputToArray.length;
+        String[] actualArray = shiftArrayTimes(stringInputToArray, times);
+        printIt(actualArray);
+    }
 
-        rotate(arr, steps);
+    public static String[] shiftArrayTimes(String[] arrayFromActualArray, int times) {
+        for (int i = 0; i < times; i++) {
+            shiftArrayToRight(arrayFromActualArray);
+        }
+        return arrayFromActualArray;
+    }
 
-        for (int i : arr) {
-            System.out.print(i + " ");
+    public static String[] shiftArrayToRight(String[] arrayFromShiftArrayTimes) {
+        String saveLastIndex = arrayFromShiftArrayTimes[arrayFromShiftArrayTimes.length - 1];
+
+        for (int i = arrayFromShiftArrayTimes.length - 2; i > -1; i--) {
+            arrayFromShiftArrayTimes[i + 1] = arrayFromShiftArrayTimes[i];
+        }
+        arrayFromShiftArrayTimes[0] = saveLastIndex;
+        return arrayFromShiftArrayTimes;
+    }
+
+    public static void printIt(String[] arrayFromRotatedArray) {
+        for (String enorila : arrayFromRotatedArray) {
+            System.out.print(enorila + " ");
         }
     }
 }
