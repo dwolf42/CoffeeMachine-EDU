@@ -13,7 +13,7 @@ public class Main {
         for (int i = 0; i < box1.length; i++) {
             if (box1[i] < box2[i]) {
                 b++;
-            } else if (box1[i] > box2[i]) {
+            } else if (box1[i] > box2[i]){
                 a++;
             }
         }
