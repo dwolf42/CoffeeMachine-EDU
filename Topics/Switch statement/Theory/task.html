@@ -1,5 +1,5 @@
 <h2>Switch statement</h2>
-<html><body><p>You already know how to shape the control flow of a program using if-else statements. Perhaps, you have faced situations when you had to stack and nest multiple if-else statements to get the desired result. In this topic, you will learn an alternative way to deal with multiple choices.</p>
+<p>You already know how to shape the control flow of a program using if-else statements. Perhaps, you have faced situations when you had to stack and nest multiple if-else statements to get the desired result. In this topic, you will learn an alternative way to deal with multiple choices.</p>
 <h5 id="when-a-conditional-statement-is-not-so-good" style="text-align: center;">When a conditional statement is not so good</h5>
 <p>Suppose you need to write a program that performs different actions depending on the value of a variable. For example, choosing an action from the menu of a game. To do that you can use a conditional statement with multiple branches as shown below.</p>
 <pre><code class="language-java">int action = ...; // a certain value from 1 to 4
@@ -17,7 +17,7 @@ if (action == 1) {
 }</code></pre>
 <p>Of course, this code handles the task. But if your conditional statement has a lot of branches, it can be hard to understand for people.</p>
 <h5 id="three-keywords-switch-case-and-default" style="text-align: center;">Three keywords: switch, case, and default</h5>
-<p><strong>The switch statement</strong> provides a way to choose between multiple cases based on the value of a single variable (not an expression!). The variable can be an integer number, character, string, or enumeration. The last two types will be studied further.</p>
+<p><strong>The switch statement</strong> provides a way to choose between multiple cases based on the value of a single variable (not an expression!). The variable can be an integer number, character, string, or enumeration. The last two types will be examined further in the following topics.</p>
 <p>Using the switch statement, the previous code will look like this:</p>
 <pre><code class="language-java">switch (action) {
     case 1:
@@ -86,4 +86,4 @@ two</code></pre>
 <p>Omitting <code class="language-java">break</code> keyword is not a good practice. Try to avoid it.</p>
 <p>Java 12–14 introduced some new features allowing to use <strong>switch</strong> as an <a href="https://hyperskill.org/learn/step/16036" rel="noopener noreferrer nofollow" target="_blank">expression</a>.</p>
 <h5 id="conclusion">Conclusion</h5>
-<p>When you have a limited number of cases to choose from, switch statements can help you avoid unnecessary nested <em>if-else </em>constructions. For that, you need the <code class="language-java">switch</code> keyword to introduce the value to evaluate, and <code class="language-java">case</code> for each of the possible values. Do not forget to also use the <code class="language-java">break</code> keyword to avoid evaluating extra cases and <code class="language-java">default</code> branch to indicate the default behavior.</p></body></html>
+<p>When you have a limited number of cases to choose from, switch statements can help you avoid unnecessary nested <em>if-else </em>constructions. For that, you need the <code class="language-java">switch</code> keyword to introduce the value to evaluate, and <code class="language-java">case</code> for each of the possible values. Do not forget to also use the <code class="language-java">break</code> keyword to avoid evaluating extra cases and <code class="language-java">default</code> branch to indicate the default behavior.</p>
