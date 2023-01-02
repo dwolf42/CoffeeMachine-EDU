@@ -7,8 +7,6 @@ options:
 - text: 3
 - text: 4
 - text: 5
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true
@@ -24,3 +22,4 @@ files:
 feedback_link: https://hyperskill.org/learn/step/2028#comment
 status: Solved
 record: -1
+local_check: true

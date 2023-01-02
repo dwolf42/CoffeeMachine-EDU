@@ -5,8 +5,6 @@ options:
 - text: 5 4 3 2
 - text: 6 5 4 3 2
 - text: '6 5 4 3 '
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true
@@ -23,3 +21,4 @@ feedback_link: https://hyperskill.org/learn/step/2026#comment
 status: Solved
 record: -1
 custom_name: Determine the result
+local_check: true

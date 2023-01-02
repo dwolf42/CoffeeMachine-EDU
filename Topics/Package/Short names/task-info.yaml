@@ -6,8 +6,6 @@ options:
 - text: java.lang
 - text: java.util
 - text: all subpackages of org.hyperskill.java.packages
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true
@@ -23,3 +21,4 @@ files:
 feedback_link: https://hyperskill.org/learn/step/2255#comment
 status: Solved
 record: -1
+local_check: true
