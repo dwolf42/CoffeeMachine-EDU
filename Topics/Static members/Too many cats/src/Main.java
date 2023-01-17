@@ -1,5 +1,6 @@
 
 class Cat {
+
     String name;
     int age;
     static int counter = 0;
