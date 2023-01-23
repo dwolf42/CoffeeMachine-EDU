@@ -56,6 +56,10 @@
             <option value="$PROJECT_DIR$/Topics/Defining classes/Representing time as a class" />
             <option value="$PROJECT_DIR$/Topics/Defining classes/The keyword" />
             <option value="$PROJECT_DIR$/Topics/Defining classes/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Enums in Java/Days of week" />
+            <option value="$PROJECT_DIR$/Topics/Enums in Java/Enum with two constants" />
+            <option value="$PROJECT_DIR$/Topics/Enums in Java/Hidden enumeration" />
+            <option value="$PROJECT_DIR$/Topics/Enums in Java/Theory" />
             <option value="$PROJECT_DIR$/Topics/Functional decomposition/Calculator with four methods" />
             <option value="$PROJECT_DIR$/Topics/Functional decomposition/Theory" />
             <option value="$PROJECT_DIR$/Topics/Getters and setters (1)/Account" />
