@@ -1,13 +1,21 @@
-# Project exclude paths
-/.gradle/
-/Coffee Machine/task/build/
-/Coffee Machine/task/out/
-/Coffee Machine/task/out/production/classes/
-/Topics/Constructor/Geometric cube/out/
-/Topics/Constructor/Geometric cube/out/production/classes/
-/Topics/Declaring a method/Vowel or not/out/
-/Topics/Declaring a method/Vowel or not/out/production/classes/
-/Topics/Functional decomposition/Calculator with four methods/out/
-/Topics/Functional decomposition/Calculator with four methods/out/production/classes/
-/Topics/Iterating over arrays/Sum array elements greater than a value/out/
-/Topics/Iterating over arrays/Sum array elements greater than a value/out/production/classes/
+# course config files
+*.yaml
+
+# gradle
+.gradle/
+gradle/
+gradlew
+*.bat
+build
+
+
+# idea confid
+.idea
+
+# old stages
+/Coffee Machine/*
+!/Coffee Machine/task/
+/Coffee Machine/task/*
+!/Coffee Machine/task/src/
+!/Coffee Machine/task/build.gradle
+!/Coffee Machine/task/build.gradle.kts

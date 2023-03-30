@@ -1,223 +1,144 @@
 package machine;
-
 import java.util.Scanner;
 
 public class CoffeeMachine {
-    static int stockWater = 400;
-    static int stockMilk = 540;
-    static int stockCoffeeBeans = 120;
-    static int stockCups = 9;
-    static int stockMoney = 550;
+    // Only allows positive integers from 0-1000 (inclusive).
+    static private final String REGEX_INT_RANGE = "([-+]?\\d+)";
+
+    static private String userInput;
+    static private final CoffeeMaker deLuvos = new CoffeeMaker();
+    static private final DisplayMessages messages = new DisplayMessages();
 
     public static void main(String[] args) {
-        selectMenu();
+        handleState();
     }
 
-    public static void displayMachineStatus() {
-        System.out.printf("%nThe coffee machine has:%n" +
-                        "%d ml of water%n" +
-                        "%d ml of milk%n" +
-                        "%d g of coffee beans%n" +
-                        "%d disposable cups%n" +
-                        "$%d of money%n",
-                stockWater, stockMilk, stockCoffeeBeans, stockCups, stockMoney);
-        selectMenu();
-    }
-
-    public static void selectMenu() {
-        String message = "\nWrite action (buy, fill, take, remaining, exit): ";
-        System.out.println(message);
-        switch (getValidMenuAction()) {
-            case "buy":
-                selectDrink();
+    // The handling for SELECT and BUY input are extracted form handleState into handleInput
+    // for better maintainability.
+    // I know this is a lot of code, but the instructions were clear "CoffeeMaker class only processes string input".
+    // Might me being incapable, might be just a lack of experience why I didn't come up with a more elegant
+    // solution for this - who knows. At least it works.
+    public static void handleState() {
+        Scanner scanner = new Scanner(System.in);
+        switch (deLuvos.state) {
+            case SELECT:
+                System.out.println(messages.SELECT_MESSAGE);
+                userInput = scanner.nextLine().toLowerCase().trim();
+                handleInput();
                 break;
-            case "fill":
-                fillStock();
+            case BUY:
+                System.out.println(messages.BUY_MESSAGE);
+                userInput = scanner.nextLine().toLowerCase().trim();
+                handleInput();
                 break;
-            case "take":
-                takeMoney();
+            case FILL_WATER:
+                System.out.println(messages.ADD_WATER);
+                userInput = scanner.nextLine().toLowerCase().trim();
+                while (!userInput.matches(REGEX_INT_RANGE)) {
+                    System.out.println(messages.ADD_WATER);
+                    userInput = scanner.nextLine().toLowerCase().trim();
+                }
+                deLuvos.processInstruction(userInput);
                 break;
-            case "remaining":
-                displayMachineStatus();
+            case FILL_MILK:
+                System.out.println(messages.ADD_MILK);
+                userInput = scanner.nextLine().toLowerCase().trim();
+                while (!userInput.matches(REGEX_INT_RANGE)) {
+                    System.out.println(messages.ADD_MILK);
+                    userInput = scanner.nextLine().toLowerCase().trim();
+                }
+                deLuvos.processInstruction(userInput);
                 break;
-            case "exit":
-                // in case there is rage against, this might terminate the machine
+            case FILL_BEANS:
+                System.out.println(messages.ADD_BEANS);
+                userInput = scanner.nextLine().toLowerCase().trim();
+                while (!userInput.matches(REGEX_INT_RANGE)) {
+                    System.out.println(messages.ADD_BEANS);
+                    userInput = scanner.nextLine().toLowerCase().trim();
+                }
+                deLuvos.processInstruction(userInput);
+                break;
+            case FILL_CUPS:
+                System.out.println(messages.ADD_CUPS);
+                userInput = scanner.nextLine().toLowerCase().trim();
+                while (!userInput.matches(REGEX_INT_RANGE)) {
+                    System.out.println(messages.ADD_CUPS);
+                    userInput = scanner.nextLine().toLowerCase().trim();
+                }
+                deLuvos.processInstruction(userInput);
+                break;
+            case TAKE_MONEY:
+                System.out.println(messages.TAKE_MESSAGE + deLuvos.getStockMoney());
+                deLuvos.processInstruction("iwastootired");
+                break;
+            case REMAINING_STOCK:
+                System.out.printf("%nThe coffee machine has:%n" +
+                                "%d ml of water%n" +
+                                "%d ml of milk%n" +
+                                "%d g of coffee beans%n" +
+                                "%d disposable cups%n" +
+                                "$%d of money%n%n",
+                        deLuvos.getStockWater(), deLuvos.getStockMilk(), deLuvos.getStockCoffeeBeans(),
+                        deLuvos.getStockCups(), deLuvos.getStockMoney());
+                deLuvos.state = MachineState.SELECT;
+                handleState();
                 break;
             default:
-                selectMenu();
+                System.out.println("Error!");
                 break;
         }
+
     }
 
-    public static void selectDrink() {
-        String displayedMessage = "\nWhat do you want to buy? 1 - espresso, 2 - latte, " +
-                "3 - cappuccino, back - to main menu:";
-        System.out.println(displayedMessage + "\n");
-        switch (getValidSelectDrinkAction()) {
-            case "1":
-                processEspresso(1);
-                break;
-            case "2":
-                processLatte(1);
-                break;
-            case "3":
-                processCappuccino(1);
-                break;
-            case "back":
-                selectMenu();
-                break;
-            default:
-                selectDrink();
-                break;
+    // FILL_MILK, FILL_BEANS FILL_CUPS, and SELECT are set in CoffeeMachine processInstruction.
+    // This is because the user must only enter "fill" once, but for every supply there is an individual
+    // input/exception handling.
+    // Handling of wrong input has not been required, but what piece of code would that be without it?
+    public static void handleInput() {
+        if (deLuvos.state == MachineState.SELECT) {
+            switch (userInput) {
+                case "buy":
+                    deLuvos.state = MachineState.BUY;
+                    handleState();
+                    break;
+                case "fill":
+                    deLuvos.state = MachineState.FILL_WATER;
+                    handleState();
+                    break;
+                case "take":
+                    deLuvos.state = MachineState.TAKE_MONEY;
+                    handleState();
+                    break;
+                case "remaining":
+                    deLuvos.state = MachineState.REMAINING_STOCK;
+                    handleState();
+                    break;
+                case "exit":
+                    System.out.println(messages.EXIT_MESSAGE);
+                    break;
+                default:
+                    System.out.println(messages.ERROR_SELECT_INPUT);
+                    handleState();
+                    break;
+            }
+        }
+        if (deLuvos.state == MachineState.BUY) {
+            switch (userInput) {
+                case "1":
+                case "2":
+                case "3":
+                    deLuvos.processInstruction(userInput);
+                    break;
+                case "back":
+                    deLuvos.state = MachineState.SELECT;
+                    handleState();
+                    break;
+                default:
+                    System.out.println(messages.ERROR_SELECT_INPUT);
+                    handleState();
+                    break;
+            }
         }
     }
 
-    public static void processEspresso(int orderedAmount) {
-        int costWater = 250;
-        int costMilk = 0;
-        int costCoffeeBeans = 16;
-        int costCups = 1;
-
-        int chargeMoney = 4;
-
-        String itemSelected = "Espresso";
-        String missingItem = findMissingItem(orderedAmount, costWater, costMilk, costCoffeeBeans, costCups);
-
-        if (missingItem.equals("none")) {
-            alterStock(orderedAmount, costWater, costMilk, costCoffeeBeans, costCups, chargeMoney);
-            confirmOrder(orderedAmount, missingItem);
-        } else {
-            confirmOrder(0, missingItem);
-        }
-    }
-
-    public static void processLatte(int orderedAmount) {
-        int costWater = 350;
-        int costMilk = 75;
-        int costCoffeeBeans = 20;
-        int costCups = 1;
-
-        int chargeMoney = 7;
-
-        String itemSelected = "Latte";
-        String missingItem = findMissingItem(orderedAmount, costWater, costMilk, costCoffeeBeans, costCups);
-
-        if (missingItem.equals("none")) {
-            alterStock(orderedAmount, costWater, costMilk, costCoffeeBeans, costCups, chargeMoney);
-            confirmOrder(orderedAmount, missingItem);
-        } else {
-            confirmOrder(0, missingItem);
-        }
-    }
-
-    public static void processCappuccino(int orderedAmount) {
-        int costWater = 200;
-        int costMilk = 100;
-        int costCoffeeBeans = 12;
-        int costCups = 1;
-
-        int chargeMoney = 6;
-
-        String itemSelected = "Cappuccino";
-        String missingItem = findMissingItem(orderedAmount, costWater, costMilk, costCoffeeBeans, costCups);
-
-        if (missingItem.equals("none")) {
-            alterStock(orderedAmount, costWater, costMilk, costCoffeeBeans, costCups, chargeMoney);
-            confirmOrder(orderedAmount, missingItem);
-        } else {
-            confirmOrder(0, missingItem);
-        }
-    }
-
-    public static String findMissingItem(int orderedAmount, int costWater, int costMilk, int costCoffeeBeans,
-                                         int costCups) {
-        if (orderedAmount * costWater > stockWater) {
-            return "water";
-        } else if (orderedAmount * costMilk > stockMilk) {
-            return "milk";
-        } else if (orderedAmount * costCoffeeBeans > stockCoffeeBeans) {
-            return "coffee beans";
-        } else if (orderedAmount * costCups > stockCups) {
-            return "cups";
-        } else {
-            return "none";
-        }
-    }
-
-    public static void alterStock(int orderedAmount, int costWater, int costMilk, int costCoffeeBeans,
-                                  int costCups, int chargeMoney) {
-        stockWater -= orderedAmount * costWater;
-        stockMilk -= orderedAmount * costMilk;
-        stockCoffeeBeans -= orderedAmount * costCoffeeBeans;
-        stockCups -= orderedAmount * costCups;
-        stockMoney += chargeMoney;
-    }
-
-    public static void fillStock() {
-        String howMuchWater = "\nWrite how many ml of water you want to add:";
-        String howMuchMilk = "Write how many ml of milk you want to add:";
-        String howMuchCoffeeBeans = "Write how many grams of coffee beans you want to add:";
-        String howMuchCups = "Write how many disposable cups of coffee you want to add:";
-        System.out.println(howMuchWater);
-        stockWater += getValidIntegerStock();
-        System.out.println(howMuchMilk);
-        stockMilk += getValidIntegerStock();
-        System.out.println(howMuchCoffeeBeans);
-        stockCoffeeBeans += getValidIntegerStock();
-        System.out.println(howMuchCups);
-        stockCups += getValidIntegerStock();
-        selectMenu();
-    }
-
-    public static void takeMoney() {
-        System.out.printf("%nI gave you $%d%n%n", stockMoney);
-        stockMoney -= stockMoney;
-        selectMenu();
-    }
-
-    public static int getValidIntegerStock() {
-        String errorMessage = "\nYou may only add amounts of 0 and above";
-        Scanner scanner = new Scanner(System.in);
-        int inputStock = scanner.nextInt();
-        while (inputStock < 0) {
-            System.out.println(errorMessage);
-            inputStock = scanner.nextInt();
-        }
-        return inputStock;
-    }
-
-    public static String getValidMenuAction() {
-        Scanner scanner = new Scanner(System.in);
-        String getMenuAction = scanner.nextLine().toLowerCase();
-        String regexPattern = "(?i)buy|fill|take|remaining|exit";
-        String errorMessage = "\nYou should enter buy, fill, take, remaining or exit";
-        while (!getMenuAction.matches(regexPattern)) {
-            System.out.println(errorMessage);
-            getMenuAction = scanner.nextLine().toLowerCase();
-        }
-        return getMenuAction;
-    }
-
-    public static String getValidSelectDrinkAction() {
-        Scanner scanner = new Scanner(System.in);
-        String getSelectDrinkAction = scanner.nextLine().toLowerCase();
-        String regexPattern = "(?i)1|2|3|back";
-        String errorMessage = "\nYou should enter numbers 1, 2, 3 or type back - to main menu";
-        while (!getSelectDrinkAction.matches(regexPattern)) {
-            System.out.println(errorMessage);
-            getSelectDrinkAction = scanner.nextLine().toLowerCase();
-        }
-        return getSelectDrinkAction;
-    }
-
-    public static void confirmOrder(int orderedAmount, String missingItem) {
-        if (orderedAmount == 0) {
-            System.out.printf("%nSorry, not enough %s!%n%n",
-                    missingItem);
-            selectMenu();
-        } else {
-            System.out.println("\nI have enough resources, making you a coffee!");
-            selectMenu();
-        }
-    }
 }

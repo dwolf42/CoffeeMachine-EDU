@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/204875/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Mon, 30 Jan 2023 08:04:41 UTC"
+update_date: "Thu, 30 Mar 2023 19:15:25 UTC"
 stages:
 - id: 175
   step: 5329
@@ -22,7 +22,7 @@ stages:
   is_completed: true
 - id: 180
   step: 5334
-  is_completed: false
+  is_completed: true
 topics:
   0:
   - title: Computer programming
@@ -44,6 +44,10 @@ topics:
     theory_id: 3499
   - title: Introduction to Operating systems
     theory_id: 9704
+  - title: Command line overview
+    theory_id: 8977
+  - title: Parameters and Options
+    theory_id: 9746
   - title: Types and variables
     theory_id: 3518
   - title: Comments
@@ -64,10 +68,6 @@ topics:
     theory_id: 3514
   - title: String
     theory_id: 3523
-  - title: Command line overview
-    theory_id: 8977
-  - title: Parameters and Options
-    theory_id: 9746
   - title: Running programs on your computer
     theory_id: 3746
   2:
