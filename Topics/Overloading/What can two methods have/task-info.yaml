@@ -1,9 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: "the same name, the same number and type of arguments."
-- text: "the same name, the same return type, the same number and type of arguments."
+- text: "the same name, the same number, order and type of arguments but different\
+    \ return type"
 - text: "the same name, the same return type but different type of arguments."
+- text: "the same name, the same number, order and type of arguments."
 files:
 - name: src/Task.java
   visible: true
